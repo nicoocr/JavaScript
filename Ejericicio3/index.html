@@ -44,7 +44,7 @@
     
 </style>
 <body>
-    <div id="capa">hola</div>
+    <div onmouseover="azul()" onmouseout="verde()"; id="capa"></div>
     <button onclick="rojo()"; id="button_rojo">Cambiar Color de Fondo a Rojo</button>
     <button onclick="amarillo()"; id="button_amarillo">Cambiar Color de Fondo a Amarillo</button>
     <button onclick="verde()"; id="button_verde">Cambiar Color de Fondo a Verde</button>
@@ -65,6 +65,9 @@
         }
         function mostrar(){
             document.getElementById("capa").style.visibility = "visible";
+        }
+        function azul() {
+            document.getElementById("capa").style.backgroundColor = "blue";
         }
     </script>
 </body>
