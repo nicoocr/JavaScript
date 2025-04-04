@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    p {
+        font-size: 18px;
+    }
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 200px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #imc {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #categoría {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #button {
+        margin-top: 10px;
+    }
+    #button:hover {
+        background-color: #0056b3;
+    }
+    #button:active {
+        background-color: #004080;
+    }
+    #button:focus {
+        outline: none;
+        box-shadow: 0 0 5px #007BFF;
+    }
+    #button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+</style>
+<body>
+    <p>Introduce el precio</p>
+    <input id="precio" type="text">
+    <p>Introduce el descuento</p>
+    <input id="descuento" type="text"><br>
+    <button id="button" onclick="calcularimc()">Calcular Precio Final</button>
+    <p id="imc"></p>
+    <p id="categoría"></p>
+    <script>
+        function calcularimc(){
+            const precio = document.getElementById("precio").value;
+            const descuento = document.getElementById("descuento").value;
+            let imc = precio - (precio * (descuento / 100));
+            document.getElementById("imc").innerHTML = imc;
+        }
+        if(imc < 0){
+            document.getElementById("categoría").innerHTML = "No válido";
+        }
+    </script>
+</body>
+</html>

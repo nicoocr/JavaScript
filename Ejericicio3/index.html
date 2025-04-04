@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    button:active {
+        background-color: #004080;
+    }
+    button:focus {
+        outline: none;
+        box-shadow: 0 0 5px #007BFF;
+    }
+    button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    #button {
+        margin-top: 10px;
+    }
+    #capa {
+        width: 100px;
+        height: 100px;
+        background-color: #ccc;
+        margin-bottom: 10px;
+    }
+    
+</style>
+<body>
+    <div id="capa">hola</div>
+    <button onclick="rojo()"; id="button_rojo">Cambiar Color de Fondo a Rojo</button>
+    <button onclick="amarillo()"; id="button_amarillo">Cambiar Color de Fondo a Amarillo</button>
+    <button onclick="verde()"; id="button_verde">Cambiar Color de Fondo a Verde</button>
+    <button onclick="ocultar()"; id="button_visible">Ocultar</button>
+    <button onclick="mostrar()"; id="button_mostrar">Mostrar</button>
+    <script>
+        function rojo() {
+            document.getElementById("capa").style.backgroundColor = "red";
+        }
+        function amarillo() {
+            document.getElementById("capa").style.backgroundColor = "yellow";
+        }
+        function verde() {
+            document.getElementById("capa").style.backgroundColor = "green";
+        }
+        function ocultar(){
+            document.getElementById("capa").style.visibility = "hidden";
+        }
+        function mostrar(){
+            document.getElementById("capa").style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>
